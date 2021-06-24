@@ -13,9 +13,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.*;
+
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.Length;
 
 @Entity
 @Table(name = "auth_user")
@@ -35,12 +36,12 @@ public class User {
 	private String lastName;
 
 	@NotNull(message="Email is compulsory")
-	@Email(message = "Email is invalid")
+	//@Email(message = "Email is invalid")
 	@Column(name = "email")
 	private String email;
 
 	@NotNull(message="Password is compulsory")
-	@Length(min=5, message="Password should be at least 5 characters")
+	//@Length(min=5, message="Password should be at least 5 characters")
 	@Column(name = "password")
 	private String password;
 
